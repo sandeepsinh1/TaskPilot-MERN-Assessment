@@ -12,20 +12,6 @@ dotenv.config();
 // Connect to the database
 connectDB(); 
 
-// --- Sample Data ---
-const adminUserData = {
-    name: 'Admin User',
-    email: 'admin@taskpilot.com',
-    password: 'password123', // Will be hashed
-    role: 'admin',
-};
-
-const employeeUserData = {
-    name: 'Employee John',
-    email: 'john@taskpilot.com',
-    password: 'password123', // Will be hashed
-    role: 'employee',
-};
 
 const importData = async () => {
     try {
