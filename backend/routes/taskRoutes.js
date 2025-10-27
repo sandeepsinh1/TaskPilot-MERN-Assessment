@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { createTask, getTasks, updateTaskStatus } = require('../controllers/taskController');
 const protect = require('../middlewares/authMiddleware');
-const roleCheck = require('../middlewares/roleMiddleware'); // ✅ correct import
+const roleCheck = require('../middlewares/roleMiddleware'); // correct import
 
 router.post('/', protect, roleCheck(['admin']), createTask);
 router.get('/', protect, getTasks);

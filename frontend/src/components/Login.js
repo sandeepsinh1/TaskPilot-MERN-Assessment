@@ -10,7 +10,7 @@ export default function Login() {
   const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // ✅ Redirect if already logged in
+  // Redirect if already logged in
   useEffect(() => {
     if (user) {
       navigate(user.role === 'admin' ? '/admin' : '/employee', { replace: true });
@@ -22,7 +22,7 @@ export default function Login() {
     setError(null);
     try {
       const res = await API.post('/auth/login', { email, password });
-      const { user, token } = res.data; // ✅ Extract correctly from backend
+      const { user, token } = res.data; // Extract from backend
 
       // Save token and user separately
       localStorage.setItem('token', token);

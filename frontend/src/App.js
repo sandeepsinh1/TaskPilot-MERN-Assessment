@@ -13,10 +13,10 @@ import { TaskProvider } from './context/TaskContext';
 
 // --- Private Route Component for Authorization ---
 function PrivateRoute({ children, role }) {
-  // ⭐️ MODIFIED: Pull the 'loading' state from the context
+  //  MODIFIED: Pull the 'loading' state from the context
   const { user, loading } = useContext(AuthContext); 
   
-  // ⭐️ FIX: Wait for context initialization (stops the render crash)
+  // FIX: Wait for context initialization (stops the render crash)
   if (loading) {
     return <div style={{ padding: '50px', textAlign: 'center' }}>**Loading...**</div>;
   }

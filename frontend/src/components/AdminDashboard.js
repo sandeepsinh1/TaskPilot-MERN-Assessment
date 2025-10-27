@@ -20,6 +20,7 @@ export default function AdminDashboard() {
   const mockEmployees = [
     { _id: '60c72b2f9a7b9e0015f3f4e2', name: 'Employee One' },
     { _id: '60c72b2f9a7b9e0015f3f4e3', name: 'Employee Two' },
+    { _id: '68fe56dc1df710adae7f7221', name: "Employee three"}
   ];
 
   const handleChange = (e) => {

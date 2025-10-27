@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs'); // or bcrypt if installed
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// REGISTER NEW USER
+// REGISTER NEW USER//currently we dont use this ,this is for when we create new user 
 const register = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -45,4 +45,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login }; // ✅ Export both functions
+module.exports = { register, login }; //  Export both functions
